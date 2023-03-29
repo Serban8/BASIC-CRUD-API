@@ -39,5 +39,10 @@ namespace Core.Services
 
             return true;
         }
+
+        public bool Delete(int serviceId)
+        {
+            return servicesRepository.Delete(serviceId);
+        }
     }
 }

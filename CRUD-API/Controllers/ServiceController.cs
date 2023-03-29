@@ -47,5 +47,15 @@ namespace CRUD_API
                 return BadRequest("Service description could not be updated!");
             return Ok(result);
         }
+
+        [HttpDelete("delete/{serviceId}")]
+        public ActionResult<bool> Delete(int serviceId)
+        {
+            var result = serviceService.Delete(serviceId);
+
+            if (!result)
+                return NotFound("Service could not be found!");
+            return Ok(result);
+        }
     }
 }
