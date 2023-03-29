@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataLayer.Entities
+namespace DataLayer.Dtos
 {
-    public class Service
+    public class ProviderDto
     {
         public int Id { get; set; }
-        public int ProviderId { get; set; }
-        public Provider Provider { get; set; }
         public string Name { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
         public string Description { get; set; }
-        public float Price { get; set; }
-        public TimeSpan Duration { get; set; }
+        public float Rating { get; set; }
     }
 }

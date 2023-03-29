@@ -43,6 +43,7 @@ namespace DataLayer
         {
             new Service {
                 Id = 1,
+                ProviderId = 1,
                 Provider = Providers[0],
                 Name = "Montat usa",
                 Description = "Montez usi ieftin",
@@ -51,6 +52,7 @@ namespace DataLayer
             },
             new Service {
                 Id = 2,
+                ProviderId = 3,
                 Provider = Providers[2],
                 Name = "Schimbat cauciucuri",
                 Description = "E vara sau iarna??",
@@ -59,6 +61,7 @@ namespace DataLayer
             },
             new Service {
                 Id = 3,
+                ProviderId = 2,
                 Provider = Providers[1],
                 Name = "Reperat teava",
                 Description = "Curatam balta din baie",
@@ -67,9 +70,10 @@ namespace DataLayer
             },
             new Service {
                 Id = 4,
+                ProviderId = 3,
                 Provider = Providers[2],
                 Name = "Schimb ulei",
-                Description = "Fa-ti masina sa mearga unsa",
+                Description = "Fa-ti masina sa mearga ca unsa",
                 Price = 150,
                 Duration = new TimeSpan(2, 0, 0)
             }

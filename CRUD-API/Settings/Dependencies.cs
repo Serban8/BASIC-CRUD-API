@@ -1,6 +1,5 @@
 ﻿using DataLayer.Repositories;
-using DataLayer;
-using System;
+using Core.Services;
 
 namespace CRUD_API.Settings
 {
@@ -13,13 +12,13 @@ namespace CRUD_API.Settings
             applicationBuilder.Services.AddSwaggerGen();
 
             AddRepositories(applicationBuilder.Services);
-            //AddServices(applicationBuilder.Services);
+            AddServices(applicationBuilder.Services);
         }
 
-        //private static void AddServices(IServiceCollection services)
-        //{
-        //    services.AddScoped<StudentService>();
-        //}
+        private static void AddServices(IServiceCollection services)
+        {
+            services.AddScoped<ServiceService>();
+        }
 
         private static void AddRepositories(IServiceCollection services)
         {
