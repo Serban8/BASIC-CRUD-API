@@ -25,7 +25,7 @@ namespace CRUD_API
         }
 
         [HttpGet("/get/{serviceId}")]
-        public ActionResult<Service> GetById(int serviceId)
+        public ActionResult<Service> GetById(int serviceId) //should return ActionResult<ServiceDto>?
         {
             var result = serviceService.GetById(serviceId);
 

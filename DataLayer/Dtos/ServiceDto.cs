@@ -9,7 +9,7 @@ namespace DataLayer.Dtos
 {
     public class ServiceDto
     {
-        public Provider Provider { get; set; }
+        public ProviderDto Provider { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
     }

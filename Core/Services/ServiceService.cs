@@ -14,18 +14,18 @@ namespace Core.Services
             this.servicesRepository = servicesRepository;
         }
 
-        public List<Service> GetAll()
+        public List<ServiceDto> GetAll()
         {
-            return servicesRepository.GetAll();
+            var services = servicesRepository.GetAll();
+
+            return services.ToServiceDtos();
         }
 
         public ServiceDto GetById(int serviceId)
         {
             var service = servicesRepository.GetById(serviceId);
 
-            var result = service.ToServiceDto();
-
-            return result;
+            return service.ToServiceDto();
         }
     }
 }
