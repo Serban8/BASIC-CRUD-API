@@ -27,5 +27,17 @@ namespace Core.Services
 
             return service.ToServiceDto();
         }
+
+        public bool EditDescription(ServicedDescriptionUpdateDto payload)
+        {
+            if (payload == null || payload.Id == null || payload.Description == null) return false;
+
+            var serviceToUpdate = servicesRepository.GetById(payload.Id);
+            if (serviceToUpdate == null) return false;
+
+            serviceToUpdate.Description = payload.Description;
+
+            return true;
+        }
     }
 }
